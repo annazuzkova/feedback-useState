@@ -25,15 +25,17 @@ export const Feedback = () => {
       </div>
       <div>
         <h2>Statics</h2>
-        <p>Good: {good}</p>
-        <p>Neutral: {neutral}</p>
-        <p>Bad: {bad}</p>
-        <p>Total: {good + neutral + bad}</p>
         {good > 0 || neutral > 0 || bad > 0 ? (
-          <p>
-            Positive procent:
-            {Math.round((good * 100) / (good + neutral + bad))}%
-          </p>
+          <div>
+            <p>Good: {good}</p>
+            <p>Neutral: {neutral}</p>
+            <p>Bad: {bad}</p>
+            <p>Total: {good + neutral + bad}</p>
+            <p>
+              Positive procent:
+              {Math.round((good * 100) / (good + neutral + bad))}%
+            </p>
+          </div>
         ) : (
           <p>There is no feedback</p>
         )}
